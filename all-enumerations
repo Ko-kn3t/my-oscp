@@ -38,7 +38,7 @@ DNS
 
 
     Find DNS server:
-       • nslookup thinc.local 10.11.1.221
+       • nslookup thinc.local 10.11.1.221 -t TXT
        • dig @10.11.1.221 thinc.local
 
 
