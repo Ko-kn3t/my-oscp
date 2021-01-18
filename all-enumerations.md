@@ -264,6 +264,7 @@ SMB&NETBIOS
     List Shares with no creds and guest account
        • smbmap -H [ip/hostname] -u anonymous -p hokusbokus -R
        • nmap --script smb-enum-shares -p 139,445 $ip
+       . nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse $ip
 
     List Shares with creds
        • smbmap -H [ip] -d [domain] -u [user] -p [password]   -r --depth 5 -R
@@ -279,6 +280,10 @@ SMB&NETBIOS
 
     Mount smb share:
        • mount -t cifs //<server ip>/<share> <local dir> -o username=”guest”,password=””
+     
+     
+    recursively download the SMB share :
+       . smbget -R smb://<$ip>/$sharename
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
