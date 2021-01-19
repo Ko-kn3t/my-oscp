@@ -512,6 +512,8 @@ POST EXPLOITATION LINUX
     Find listening services:
        •  netstat -alp
        •  netstat -ano
+       .  ss -tulpn
+       .  netstat -aunlp
 
     Copy ssh private kets:
        •  /etc/ssh/ssh_host_dsa_key
