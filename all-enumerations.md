@@ -415,7 +415,8 @@ SHELLS
     Spawning a TTY Shell - Break out of Jail or limited shell You should almost always upgrade your shell after taking control of an apache or www user (For example when you encounter an error message when trying to run an exploit sh: no job control in this shell )
 
     Interactive shell:
-       •python -c 'import pty; pty.spawn("/bin/bash")'
+       . rlwrap nc -nvlp 1234
+       • python -c 'import pty; pty.spawn("/bin/bash")'
        • echo os.system('/bin/bash')
 
     Adjust Interactive shell:
