@@ -255,8 +255,11 @@ SMB&NETBIOS
        • smbmap -u anonymous -p anonymous -H 10.10.10.172
        • smbmap -u '' -p '' -H 10.10.10.172 
        
-    Vulnerability Scanning
+    Vulnerability Scanning / samba Version scanning
        •  nmap --script="+*smb* and not brute and not dos and not fuzzer"  -p 139,445 -oN smb-vuln $ip
+       
+       •  msf6 > use auxiliary/scanner/smb/smb_version
+       
 
     Enumerate Hostnames
        •  nmblookup -A $ip
