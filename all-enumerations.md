@@ -520,7 +520,11 @@ POST EXPLOITATION LINUX
        •  netstat -ano
        .  ss -tulpn
        .  netstat -aunlp
-
+    
+    Checking running services:
+       •  ps -aux
+       •  ps -aux | grep <program-name>
+       
     Copy ssh private kets:
        •  /etc/ssh/ssh_host_dsa_key
        • /etc/ssh/ssh_host_key
