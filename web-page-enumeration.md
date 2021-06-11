@@ -67,7 +67,17 @@ USEFUL SHELL FOR WEB PAGE EXPLOITATION
        
        
  -------------------------------------------------------------------------------------------------------------------------------------
-      
+ 
+ 
+ Don't forget to use WPScan, Joomala Scaner, Dupral Scanner, etc... if website is using one of these
+ 
+    wpscan
+       •  wpscan --url "http://<target-IP>" -e u,p --api-token <TOKEN>
        
+   
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+ Always try to view page source and JavaScript files in manual.
  
  
