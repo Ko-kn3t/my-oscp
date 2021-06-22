@@ -6,6 +6,7 @@ ENUMERATION
     Host Discovery
        •  nmap -sn  10.11.1.1-254 -vv -oA hosts
        •  nmap -sC -sV -sS -Pn -T4 <host>
+       •  masscan -e tun0 -p1-65535,U:1-65535 <host> --rate=1000
        •  netdiscover -r 10.11.1.0/24
        • crackmapexec 192.168.10.0/24
        • arp-scan --interface=eth0 192.168.0.0/24
