@@ -10,6 +10,10 @@ msf-pattern_create -l 2400
 
 
 
+Add pattern in payload and run exploit.py
+
+
+
 If program got crush, find offset :
 
 !mona findmsp -distance 2400
@@ -24,7 +28,7 @@ return = "BBBB"
 
 
 
-Let's find bad char, first set config to compare :
+Let's find bad chars, first set config to compare :
 
 !mona bytearray -b "\x00"
 
