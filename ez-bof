@@ -1,3 +1,7 @@
+#https://tryhackme.com/room/bufferoverflowprep
+#https://medium.com/swlh/tryhackme-buffer-overflow-prep-9b2ece17a13c
+
+
 First of all, we need to set mona config directory :
 
 !mona config -set workingfolder c:\mona\%p
@@ -34,7 +38,10 @@ Let's find bad chars, first set config to compare :
 
 
 
-Generate bad chars
+To generate bad chars, run badchars.py
+
+
+Add badchars to payload.
 
 
 
